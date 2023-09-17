@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen do C sang do F</title>
+</head>
+<body>
+Nhap do C :
+<input type="number" id="doC">
+<button type="button" onclick="result()" >Chuyen</button>
+<p id="kq"></p>
+
+
+<script>
+    function result() {
+        let doC = +document.getElementById('doC').value;
+        let doF = (doC * 9/5) + 32;
+
+        document.getElementById('kq').innerHTML = 'Do F bang ' + doF;
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh dien tich hinh vuong</title>
+</head>
+<body>
+Nhap canh :
+<input type="number" id="a">
+<button type="button" onclick="acr()">Ket qua</button>
+<p id="result"></p>
+
+
+
+<script>
+    function acr() {
+        let a = +document.getElementById('a').value;
+        let acr = a*a;
+
+        document.getElementById('result').innerHTML = 'Dien tich hinh vuong la ' + acr;
+    }
+
+</script>
+</body>
+</html>

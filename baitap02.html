@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen met sang feet</title>
+</head>
+<body>
+Nhap do dai (m) :
+<input type="number" id="met">
+<button type="button" onclick="feet()">Chuyen</button>
+<p id="kq"></p>
+
+
+<script>
+    function feet() {
+        let m = +document.getElementById("met").value;
+        let f = (m*3.2808);
+
+        document.getElementById("kq").innerHTML = 'Do feet bang ' + f;
+
+    }
+
+
+</script>
+</body>
+</html>

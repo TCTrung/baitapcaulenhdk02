@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai phuong trinh bac 1</title>
+</head>
+<body>
+Nhap so a:
+<input type="number" id="a"> <br>
+Nhap so b:
+<input type="number" id="b"> <br>
+<button type="button" onclick="result()">Ket qua</button>
+<p id="kq"></p>
+
+<script>
+    function result() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+
+        if (a === 0) {
+            if (b === 0) {
+                document.getElementById('kq').innerHTML = 'Phuong trinh vo so nghiem';
+            } else {
+                document.getElementById('kq').innerHTML = 'Phuong trinh vo nghiem';
+            }
+
+        } else {
+            let x = -b / a;
+            document.getElementById('kq').innerHTML = 'Nghiem x = ' + x;
+        }
+
+    }
+
+</script>
+</body>
+</html>

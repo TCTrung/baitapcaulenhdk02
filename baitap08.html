@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra tuoi</title>
+</head>
+<body>
+Nhap gia tri :
+<input type="number" id="year">
+<button type="button" onclick="result()">Kiem tra</button>
+<p id="kq"></p>
+
+<script>
+    function result() {
+        let year = document.getElementById('year').value;
+
+        if (year > 0 && year < 120) {
+            document.getElementById('kq').innerHTML = "Tuoi cua ban la " + year;
+
+        }else {
+            document.getElementById('kq').innerHTML = "Gia tri " + year + " khong phai la tuoi cua ban";
+        }
+
+    }
+
+
+</script>
+
+</body>
+</html>

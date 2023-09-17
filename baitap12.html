@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh lai xuat</title>
+</head>
+<body>
+<!--1 thang lai xuat 4,75-->
+<!--tren 12 thang lai xuat 6,75-->
+
+
+Nhap so tien ban gui (VND) :
+<input type="number" id="money">
+Nhap so thang :
+<input type="number" id="month">
+<button type="button" onclick="result()">Kiem tra</button>
+<p id="kq"></p>
+
+<script>
+    function result() {
+        let a = document.getElementById('money').value;
+        let b = document.getElementById('month').value;
+
+        if ( b < 12) {
+            document.getElementById('kq').innerHTML = 'Tong tien ban nhan la ' + (a*(1 + 0.0475)**b) + ' VND'
+        }else{
+            document.getElementById('kq').innerHTML = 'Tong tien ban nhan la '+ (a*(1 + 0.0675)**b) +' VND'
+        }
+
+    }
+
+
+
+</script>
+</body>
+</html>

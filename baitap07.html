@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai phuong trinh bac 2</title>
+</head>
+<body>
+Nhap so a:
+<input type="number" id="a"> <br>
+Nhap so b:
+<input type="number" id="b"> <br>
+Nhap so c:
+<input type="number" id="c"> <br>
+<button type="button" onclick="result()">Ket qua</button>
+<p id="kq"></p>
+
+
+<script>
+    function result() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let c = +document.getElementById('c').value;
+
+        let d = (b * b) - (4 * a * c);
+        if (a == 0) {
+            if (b == 0) {
+                if (c == 0) {
+                    document.getElementById('kq').innerHTML = 'Phuong trinh vo so nghiem'
+                } else {
+                    document.getElementById('kq').innerHTML = 'Phuong trinh vo nghiem'
+                }
+
+            } else {
+                let x = -c / b;
+                document.getElementById('kq').innerHTML = 'Nghiem x =' + x;
+            }
+        } else if (d < 0) {
+            document.getElementById('kq').innerHTML = 'Phuong trinh vo nghiem'
+        } else if (d == 0) {
+            let x = -b / (2 * a);
+            document.getElementById('kq').innerHTML = 'Nghiem x1 = x2 =' + x;
+        } else {
+            let x1 = (-b + Math.sqrt(d)) / (2 * a);
+            let x2 = (-b - Math.sqrt(d)) / (2 * a);
+            document.getElementById('kq').innerHTML = 'Nghiem x1 = ' + x1 + ' x2 = ' + x2;
+        }
+
+    }
+
+</script>
+</body>
+</html>

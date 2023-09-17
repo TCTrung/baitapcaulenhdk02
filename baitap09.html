@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra co phai cac canh tam giac khong</title>
+</head>
+<body>
+Nhap canh a :
+<input type="number" id="a"> <br>
+Nhap canh b :
+<input type="number" id="b"> <br>
+Nhap canh c :
+<input type="number" id="c">
+<button type="button" onclick="result()">Kiem tra</button>
+<p id="kq"></p>
+
+<script>
+    function result() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+
+        if (a >0 && b >0 && c >0 && (a + b) > c && (a + c) > b && (b + c) > a) {
+            document.getElementById("kq").innerHTML = "Day la cac canh cua tam giac";
+        } else {
+            document.getElementById("kq").innerHTML = "Day khong phai cac canh cua tam giac";
+        }
+
+    }
+
+
+</script>
+
+
+</body>
+</html>
